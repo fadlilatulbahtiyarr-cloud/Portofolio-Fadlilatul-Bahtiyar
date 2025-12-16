@@ -169,7 +169,7 @@
         /* 1. Main Card (Depan) */
         .main-card {
         z-index: 30;
-        transform: scale(1) translateY(-10px) translateX(10px);
+        transform: scale(1) translateY(-10px) translateX(5px);
         }
 
         /* 2. Back Cards (Belakang) */
@@ -183,7 +183,7 @@
 
         /* Kartu Utama: Muter & Mengecil */
         .perspective-container.active .main-card {
-        transform: translateY(-160px) translateX(30PX) scale(0.6);
+        transform: translateY(-160px) translateX(0PX) scale(0.6);
         z-index: 40; /* Tetap paling atas visualnya */
         }
 
@@ -191,14 +191,14 @@
         .perspective-container.active .back-card-left {
         opacity: 1;
         z-index: 10;
-        transform: translateY(-80px) translateX(-100px) rotate(-9deg) scale(0.5);
+        transform: translateY(-80px) translateX(-130px) rotate(-9deg) scale(0.5);
         }
 
         /* Kartu Kanan: Muncul ke Kanan */
         .perspective-container.active .back-card-right {
         opacity: 1;
         z-index: 30;
-        transform: translateY(-80px) translateX(160px) rotate(9deg) scale(0.5);
+        transform: translateY(-80px) translateX(130px) rotate(9deg) scale(0.5);
         }
         /* Menyembunyikan scrollbar untuk Chrome, Safari and Opera */
         .hide-scrollbar::-webkit-scrollbar {
@@ -339,7 +339,7 @@
             <div class="relative z-10">
                 <div class="flex items-center gap-4 mb-16">
                     <div class="h-px bg-white/20 flex-1"></div>
-                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white uppercase tracking-widest border-2 border-white px-8 py-3 rounded-full bg-forest/50 backdrop-blur">Minat & Fokus</h2>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white uppercase tracking-widest border-2 border-white px-8 py-3 rounded-full bg-forest/50 backdrop-blur">Minat</h2>
                     <div class="h-px bg-white/20 flex-1"></div>
                 </div>
 
@@ -399,7 +399,7 @@
             <!-- No Grid here for contrast -->
             <div class="flex items-center gap-4 mb-16">
                 <div class="h-px bg-white/20 flex-1"></div>
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-white uppercase tracking-widest border-2 border-white px-8 py-3 rounded-full bg-forest/50 backdrop-blur">Aktivitas Akademik</h2>
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-white uppercase tracking-widest border-2 border-white px-8 py-3 rounded-full bg-forest/50 backdrop-blur">Akademik</h2>
                 <div class="h-px bg-white/20 flex-1"></div>
             </div>
  
@@ -533,7 +533,7 @@
         <div class="max-w-7xl mx-auto raised-section rounded-[3rem] p-8 md:p-16 reveal">
             <div class="flex items-center gap-4 mb-16">
                 <div class="h-px bg-white/20 flex-1"></div>
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-white uppercase tracking-widest border-2 border-white px-8 py-3 rounded-full bg-forest/50 backdrop-blur">Skills & Tools</h2>
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-white uppercase tracking-widest border-2 border-white px-8 py-3 rounded-full bg-forest/50 backdrop-blur">Skills</h2>
                 <div class="h-px bg-white/20 flex-1"></div>
             </div>
 
@@ -641,7 +641,7 @@
                     <i data-lucide="mail" class="w-10 h-10 text-white"></i>
                 </div>
                 
-                <h2 class="text-5xl font-bold font-display text-white mb-6">
+                <h2 class="text-4xl font-bold font-display text-white mb-2">
                     Ayo <span class="text-neon-yellow">Berkolaborasi!</span>
                 </h2>
                 
