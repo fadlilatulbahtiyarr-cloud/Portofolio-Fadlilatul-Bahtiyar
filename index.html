@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -25,19 +25,20 @@
                         display: ['"Space Grotesk"', 'sans-serif'],
                     },
                     colors: {
-                        'neon-yellow': '#D2FF28', 
-                        'acid-green': '#9BF019',  
-                        'toxic-green': '#4BD200', 
-                        'laurel': '#008200',      
-                        'forest': '#004119',      
-                        'deep-forest': '#002a10',
-                        'dark-void': '#001508', // New darker background
+                        // Palet Warna Diperkaya (Enriched)
+                        'primary': '#00BA8C',     // Green 700 (Deep Green - Main)
+                        'vibrant': '#22c55e',     // Green 500 (Bright Pop)
+                        'lime-pop': '#84cc16',    // Lime 500 (Fresh Accent)
+                        'rich-gold': '#00A7FE',   // Yellow 500 (Luxurious Accent)
+                        'forest': '#022c22',      // Emerald 950 (High Contrast Text)
+                        'soft-bg': '#f0fdf4',     // Green 50 (Background)
+                        'surface': '#ffffff',     // Pure White
+                        'slate-text': '#1e293b',  // Slate 800 (Readable Text)
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'glow': 'glow 3s ease-in-out infinite alternate',
                         'wave': 'wave 2.5s infinite',
-                        'bounce-slow': 'bounce 3s infinite',
                     },
                     keyframes: {
                         float: {
@@ -45,8 +46,8 @@
                             '50%': { transform: 'translateY(-15px)' },
                         },
                         glow: {
-                            '0%': { boxShadow: '0 0 5px #9BF019, 0 0 10px #9BF019' },
-                            '100%': { boxShadow: '0 0 20px #D2FF28, 0 0 30px #4BD200' },
+                            '0%': { boxShadow: '0 0 5px #22c55e, 0 0 10px #84cc16' },
+                            '100%': { boxShadow: '0 0 20px #15803d, 0 0 30px #eab308' },
                         },
                         wave: {
                             '0%': { transform: 'rotate(0deg)' },
@@ -57,6 +58,11 @@
                             '50%': { transform: 'rotate(10deg)' },
                             '60%, 100%': { transform: 'rotate(0deg)' },
                         }
+                    },
+                    boxShadow: {
+                        'soft-green': '0 10px 40px -10px rgba(21, 128, 61, 0.2)',
+                        'glow-green': '0 0 20px rgba(34, 197, 94, 0.4)',
+                        'card-hover': '0 20px 40px -5px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(21, 128, 61, 0.1)',
                     }
                 }
             }
@@ -64,63 +70,93 @@
     </script>
 
     <style>
-        /* Custom Scrollbar */
+        /* Custom Scrollbar - High Contrast */
         ::-webkit-scrollbar {
-            width: 10px;
-            background: #00230e;
+            width: 12px;
+            background: #f0fdf4;
         }
         ::-webkit-scrollbar-thumb {
-            background: #ffffff;
-            border-radius: 5px;
-            border: 2px solid #001508;
+            background: #15803d;
+            border-radius: 6px;
+            border: 3px solid #ffffff;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #D2FF28;
+            background: #166534;
         }
 
-        /* Glassmorphism Utilities */
+        /* Glassmorphism Utilities - More Crisp */
         .glass-panel {
-            background: rgba(0, 65, 25, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(21, 128, 61, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.427);
         }
         
-        /* Raised Section Effect (Efek Timbul) */
+        /* Raised Section Effect - Deeper Shadows */
         .raised-section {
-            background: linear-gradient(165deg, rgba(0, 65, 25, 0.8), rgba(0, 25, 10, 0.95));
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(170deg, #00BA8C 10%, #beff634a 100%);
+            border: 3px solid rgba(255, 255, 255, 1);
             box-shadow: 
-                20px 20px 60px rgba(0, 0, 0, 0.6),
-                -5px -5px 20px rgba(255, 255, 255, 0.02);
+                15px 15px 18px rgba(11, 73, 64, 0.255), 
+                -4px -4px 20px rgba(11, 73, 64, 0.336);
             position: relative;
             overflow: hidden;
         }
 
-        /* Grid Background Pattern */
+        .kotak-section {
+            background: linear-gradient(170deg, #b8f3e4 10%, #e8eae5a2 100%);
+            border: 3px solid rgba(255, 255, 255, 1);
+            box-shadow: 
+                15px 15px 18px rgba(11, 73, 64, 0.255), 
+                -4px -4px 20px rgba(11, 73, 64, 0.336);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .organisasi-section {
+            background: linear-gradient(170deg, #ffffff 10%, #e8eae5a2 100%);
+            border: 3px solid rgba(255, 255, 255, 1);
+            box-shadow: 
+                4px 4px 10px rgba(11, 73, 64, 0.107), 
+                -4px -4px 20px rgba(11, 73, 64, 0.107);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Grid Background Pattern - More Visible */
         .grid-bg {
-            background-size: 40px 40px;
+            background-size: 50px 50px;
             background-image: 
-                linear-gradient(to right, rgba(30, 208, 36, 0.336) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(30, 208, 36, 0.336) 1px, transparent 1px);
-            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+                linear-gradient(to right, rgba(11, 83, 79, 0.996) 1.3px, transparent 1px),
+                linear-gradient(to bottom, rgba(11, 83, 79, 0.996) 1.3px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+        }
+
+        .grid-atas {
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(156, 250, 206, 0.996) 1.3px, transparent 1px),
+                linear-gradient(to bottom, rgba(156, 250, 206, 0.996) 1.3px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
         }
         
         .glass-card {
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(0, 0, 0, 0.2));
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(22, 163, 74, 0.1); /* Green tint border */
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border-radius: 2rem; /* More Rounded */
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.214), 0 2px 4px -1px rgba(0, 0, 0, 0.055);
         }
 
         .glass-card:hover {
-            border-color: #D2FF28;
-            background: rgba(255, 255, 255, 0.12);
+            border-color: #22c55e;
+            background: #ffffff;
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 40px -10px rgba(210, 255, 40, 0.2);
+            box-shadow: 0 20px 40px -10px rgba(21, 128, 61, 0.15);
         }
 
         /* Scroll Reveal Animation Classes */
@@ -137,7 +173,9 @@
         /* Typewriter Cursor */
         .typewriter::after {
             content: '|';
-            animation: blink 1.4s infinite;
+            color: #15803d;
+            font-weight: 800;
+            animation: blink 1.2s infinite;
         }
         @keyframes blink {
             0%, 100% { opacity: 1; }
@@ -145,146 +183,159 @@
         }
         
         /* Active Nav Link */
+        .nav-link {
+            color: #334155;
+            font-weight: 500;
+        }
         .nav-link.active {
-            color: #D2FF28;
-            font-weight: 700;
+            color: #15803d;
+            font-weight: 800;
         }
         .nav-link.active span {
             width: 100%;
+            height: 3px; /* Thicker underline */
+            border-radius: 2px;
         }
-        /* --- CUSTOM ANIMATION STYLES --- */
+
+        /* --- CUSTOM ANIMATION STYLES (Photo Stack) --- */
         .perspective-container {
-        perspective: 1000px; /* Membuat efek 3D */
+            perspective: 1200px; /* Enhanced depth */
         }
 
         .photo-card-anim {
-        position: absolute;
-        inset: 0; /* Sama dengan top-0 left-0 w-full h-full */
-        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); /* Efek membal/bouncy */
-        transform-origin: center bottom;
+            position: absolute;
+            inset: 0;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-origin: center bottom;
+            border-radius: 2rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Stronger shadow */
+            background: white;
+            padding: 0.5rem;
+            border: 1px solid rgba(0,0,0,0.05);
         }
-
-        /* --- LOGIC TUMPUKAN (STACK) --- */
 
         /* 1. Main Card (Depan) */
         .main-card {
-        z-index: 30;
-        transform: scale(1) translateY(-10px) translateX(5px);
+            z-index: 30;
+            transform: scale(1) translateY(-10px) translateX(5px);
+            border: 4px solid #ffffff; /* White border frame */
         }
 
         /* 2. Back Cards (Belakang) */
         .back-card {
-        z-index: 20;
-        opacity: 0;
-        transform: scale(0.9) translateY(10px); /* Sembunyi di belakang */
+            z-index: 20;
+            opacity: 0;
+            transform: scale(0.9) translateY(10px);
         }
 
         /* --- LOGIC SAAT DIKLIK (.active) --- */
-
-        /* Kartu Utama: Muter & Mengecil */
         .perspective-container.active .main-card {
-        transform: translateY(-160px) translateX(0PX) scale(0.6);
-        z-index: 40; /* Tetap paling atas visualnya */
+            transform: translateY(-160px) translateX(0PX) scale(0.6);
+            z-index: 40;
+            box-shadow: 0 25px 60px rgba(21, 128, 61, 0.3); /* Colored shadow */
+            border-color: #22c55e;
         }
 
-        /* Kartu Kiri: Muncul ke Kiri */
         .perspective-container.active .back-card-left {
-        opacity: 1;
-        z-index: 10;
-        transform: translateY(-80px) translateX(-130px) rotate(-9deg) scale(0.5);
+            opacity: 1;
+            z-index: 10;
+            transform: translateY(-80px) translateX(-130px) rotate(-12deg) scale(0.5);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
 
-        /* Kartu Kanan: Muncul ke Kanan */
         .perspective-container.active .back-card-right {
-        opacity: 1;
-        z-index: 30;
-        transform: translateY(-80px) translateX(130px) rotate(9deg) scale(0.5);
-        }
-        /* Menyembunyikan scrollbar untuk Chrome, Safari and Opera */
-        .hide-scrollbar::-webkit-scrollbar {
-        display: none;
+            opacity: 1;
+            z-index: 30;
+            transform: translateY(-80px) translateX(130px) rotate(12deg) scale(0.5);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
 
-        /* Menyembunyikan scrollbar untuk IE, Edge and Firefox */
-        .hide-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Text Shadows for Heading */
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
     </style>
 </head>
-<body class="bg-dark-void text-white selection:bg-neon-yellow selection:text-forest overflow-x-hidden font-sans antialiased">
+<body class="bg-surface text-slate-text selection:bg-lime-pop selection:text-forest overflow-x-hidden font-sans antialiased">
 
     <!-- NAVBAR -->
     <nav class="fixed top-0 w-full glass-panel z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold font-display tracking-tight flex items-center gap-2 group">
-                <div class="w-10 h-10 bg-white rounded-[1rem] flex items-center justify-center text-forest group-hover:bg-neon-yellow group-hover:rotate-12 transition-all shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-vibrant rounded-xl flex items-center justify-center text-white group-hover:rotate-12 transition-all shadow-lg shadow-green-600/30 border border-green-400/50">
                     <i data-lucide="sprout" class="w-6 h-6 fill-current"></i>
                 </div>
-                <span class="text-white group-hover:text-neon-yellow transition-colors">FADLILATUL <span class="text-neon-yellow"> BAHTIYAR</span></span>
+                <span class="text-forest group-hover:text-primary transition-colors">FADLILATUL <span class="text-primary font-extrabold"> BAHTIYAR</span></span>
             </a>
             
-            <div class="hidden md:flex gap-8 font-medium text-sm text-gray-200">
+            <div class="hidden md:flex gap-8 font-medium text-sm">
                 <a href="#home" class="nav-link relative group py-2">
                     Beranda
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-yellow transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
                 <a href="#interests" class="nav-link relative group py-2">
                     Minat
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-yellow transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
                 <a href="#activity" class="nav-link relative group py-2">
                     Aktivitas
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-yellow transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
                 <a href="#org" class="nav-link relative group py-2">
                     Organisasi
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-yellow transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
             </div>
 
-            <a href="#contact" class="hidden md:flex px-6 py-2.5 rounded-full border-2 border-white text-white font-bold text-sm hover:bg-neon-yellow hover:border-neon-yellow hover:text-forest transition-all hover:scale-105 active:scale-95">
+            <a href="#contact" class="hidden md:flex px-6 py-2.5 rounded-full bg-forest text-white font-bold text-sm hover:bg-primary hover:shadow-lg hover:shadow-green-900/20 transition-all hover:scale-105 active:scale-95 shadow-md border-2 border-transparent">
                 Kenalan Yuk! 👋
             </a>
             
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white hover:text-neon-yellow">
+            <button class="md:hidden text-forest hover:text-primary transition-colors">
                 <i data-lucide="menu" class="w-8 h-8"></i>
             </button>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <!-- Hero tetap full-width untuk impact, tapi dengan grid background halus -->
-    <section id="home" class="relative pt-32 pb-20 px-6 min-h-screen flex items-center overflow-hidden">
+    <section id="home" class="relative pt-32 pb-20 px-6 min-h-screen flex items-center overflow-hidden bg-surface">
         <!-- Grid Pattern on Hero -->
-        <div class="absolute inset-0 grid-bg opacity-30"></div>
-        <!-- Glow Effects -->
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-toxic-green/10 rounded-full blur-[120px] mix-blend-screen animate-pulse"></div>
+        <div class="absolute inset-0 grid-bg opacity-20"></div>
+        <!-- Glow Effects (Enriched) -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-lime-pop/20 rounded-full blur-[120px] mix-blend-multiply animate-pulse"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-vibrant/10 rounded-full blur-[100px] -z-10"></div>
         
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-2 items-center relative z-2">
             <div class="order-2 md:order-1 reveal">
-                <div class="inline-flex items-center gap-3 px-4 py-2 border border-white/30 rounded-full text-white text-xs font-bold mb-8 bg-white/5 hover:bg-white/10 transition-colors cursor-default backdrop-blur-sm shadow-lg">
+                <div class="inline-flex items-center gap-3 px-4 py-2 border border-green-200 rounded-full text-forest text-xs font-bold mb-8 bg-white/60 hover:bg-white hover:border-green-400 transition-all cursor-default backdrop-blur-sm shadow-sm group">
                     <span class="relative flex h-2 w-2">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2 w-2 bg-neon-yellow"></span>
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-vibrant opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-vibrant group-hover:bg-primary transition-colors"></span>
                     </span>
                     MAHASISWA PROTEKSI TANAMAN
                 </div>
                 
-                <h1 class="text-5xl md:text-7xl font-bold font-display leading-[1.1] mb-6 text-white drop-shadow-xl">
-                    <span class="text-neon-yellow typewriter" id="typewriter-text"></span><br>
+                <h1 class="text-5xl md:text-7xl font-bold font-display leading-[1.1] mb-6 text-forest text-shadow-sm">
+                    <span class="text-primary typewriter" id="typewriter-text"></span><br>
                     Masa Depan.
                 </h1>
                 
-                <p class="text-xl text-gray-200 mb-10 leading-relaxed max-w-lg pl-6 border-l-4 border-neon-yellow bg-gradient-to-r from-forest/50 to-transparent p-4 rounded-r-2xl">
-                    Greetings!  i'am  Bahtiyar <span class="inline-block animate-wave origin-bottom-right text-2xl">👋</span><br> Mahasiswa Proteksi Tanaman IPB University Semester 1 yang tertarik pada dunia biologi, keberlanjutan alam, dan pertanian.
+                <p class="text-xl text-slate-700 font-medium mb-10 leading-relaxed max-w-lg pl-6 border-l-4 border-primary bg-gradient-to-r from-soft-bg to-transparent p-4 rounded-r-2xl shadow-sm">
+                    Greetings! I'm Bahtiyar <span class="inline-block animate-wave origin-bottom-right text-2xl">👋</span><br> 
+                    Mahasiswa <span class="text-primary font-bold">IPB University</span> Semester 1 yang tertarik pada dunia biologi, keberlanjutan alam, dan pertanian.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-5">
-                    <a href="#interests" class="px-8 py-4 bg-white text-forest rounded-2xl font-bold hover:bg-neon-yellow hover:-translate-y-1 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2 group active:scale-95">
+                    <a href="#interests" class="px-8 py-4 bg-primary text-white rounded-2xl font-bold hover:bg-forest hover:-translate-y-1 transition-all shadow-lg shadow-green-700/30 flex items-center justify-center gap-2 group active:scale-95 border-b-4 border-green-800 hover:border-green-950">
                         Jelajahi Profil
                         <i data-lucide="arrow-down" class="w-5 h-5 group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                    <a href="#contact" class="px-8 py-4 bg-white text-forest border border-green-200 rounded-2xl font-bold hover:bg-soft-bg hover:text-primary hover:-translate-y-1 transition-all shadow-lg shadow-green-700/30 flex items-center justify-center gap-2 group active:scale-95">
+                        Kontak Saya
                     </a>
                 </div>
             </div>
@@ -292,38 +343,40 @@
             <!-- Hero Image -->
             <div class="relative flex justify-center animate-float order-1 md:order-2">
                 <div class="relative w-80 h-96 md:w-[28rem] md:h-[32rem]">
-                    <!-- Decorative Elements -->
-                     <div class="relative flex justify-center animate-float order-1 md:order-2">
-                     
-                         <div id="photoGallery" class="relative w-80 h-96 md:w-[28rem] md:h-[32rem] cursor-pointer perspective-container">
-                         <div class="photo-card-anim back-card back-card-left bg-deep-forest rounded-[2.5rem] p-2 shadow-xl border border-white/20">
-                             <div class="w-full h-full bg-forest rounded-[2rem] overflow-hidden relative">
-                                 <img src="pivoot.jpg" 
-                                    class="w-full h-full object-cover grayscale opacity-80">
-                             </div>
-                         </div>
+                      <div id="photoGallery" class="relative w-80 h-96 md:w-[28rem] md:h-[32rem] cursor-pointer perspective-container">
+                        
+                        <!-- Cards Background -->
+                        <div class="photo-card-anim back-card back-card-left">
+                            <div class="w-full h-full bg-slate-200 rounded-[2rem] overflow-hidden relative border border-gray-200">
+                                <img src="pivoot.jpg" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" onerror="this.src='https://images.unsplash.com/photo-1501854140884-074bf86ee911?q=80&w=1000&auto=format&fit=crop'">
+                            </div>
+                        </div>
 
-                         <div class="photo-card-anim back-card back-card-right bg-deep-forest rounded-[2.5rem] p-2 shadow-xl border border-white/20">
-                             <div class="w-full h-full bg-forest rounded-[2rem] overflow-hidden relative">
-                                 <img src="almet.jpg" 
-                                    class="w-full h-full object-cover grayscale opacity-80">
-                             </div>
-                         </div>
+                        <div class="photo-card-anim back-card back-card-right">
+                            <div class="w-full h-full bg-slate-200 rounded-[2rem] overflow-hidden relative border border-gray-200">
+                                <img src="almet.jpg" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" onerror="this.src='https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000&auto=format&fit=crop'">
+                            </div>
+                        </div>
 
-                         <div class="photo-card-anim main-card bg-deep-forest rounded-[2.5rem] p-2 shadow-2xl shadow-black/80 overflow-hidden border border-white/20 hover:border-neon-yellow/50 transition-colors">
-                            
-                             <div class="w-full h-full bg-forest rounded-[2rem] overflow-hidden relative group">
-                                <div class="absolute inset-0 bg-gradient-to-t from-forest/90 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                        <!-- Main Card -->
+                        <div class="photo-card-anim main-card">
+                             <div class="w-full h-full bg-soft-bg rounded-[2rem] overflow-hidden relative group shadow-inner">
+                                <div class="absolute inset-0 bg-gradient-to-t from-forest/50 to-transparent z-10 opacity-40 group-hover:opacity-10 transition-opacity"></div>
                                 
                                 <img src="profil.jpg" 
                                     alt="Raka" 
-                                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100">
+                                    class="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
+                                    onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop'">
                                 
-                                <div class="absolute bottom-4 left-4 z-20 bg-white/10 backdrop-blur px-4 py-2 rounded-xl border border-white/20 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                                    <p class="text-neon-yellow font-bold text-xs">📸 Selamat Datang!</p>
+                                <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 border border-green-100">
+                                    <p class="text-primary font-bold text-xs flex items-center gap-1">
+                                        <i data-lucide="camera" class="w-3 h-3"></i> 
+                                        Tap to expand!
+                                    </p>
                                 </div>
                              </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -331,61 +384,63 @@
     </section>
 
     <!-- SECTION 1: MINAT (INTERESTS) -->
-    <!-- Tampilan Kartu Timbul (Raised Section) dengan Grid -->
     <section id="interests" class="py-12 px-4 md:px-6">
-        <div class="max-w-7xl mx-auto raised-section rounded-[3rem] p-8 md:p-16 reveal">
+        <div class="max-w-7xl mx-auto raised-section rounded-[2rem] p-8 md:p-16 reveal">
             <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none"></div>
             
             <div class="relative z-10">
                 <div class="flex items-center gap-4 mb-16">
-                    <div class="h-px bg-white/20 flex-1"></div>
-                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white uppercase tracking-widest border-2 border-white px-8 py-3 rounded-full bg-forest/50 backdrop-blur">Minat</h2>
-                    <div class="h-px bg-white/20 flex-1"></div>
+                    <div class="h-px bg-primary/30 flex-1"></div>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-forest uppercase tracking-widest border-2 border-primary/20 px-8 py-3 rounded-full bg-white/80 backdrop-blur shadow-md text-shadow-sm">Minat</h2>
+                    <div class="h-px bg-primary/30 flex-1"></div>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Card Minat 1 -->
-                    <div class="glass-card p-8 relative overflow-hidden group cursor-pointer">
-                        <div class="absolute -right-12 -top-12 w-32 h-32 bg-white/5 rounded-full group-hover:bg-neon-yellow/20 transition-all duration-500"></div>
-                        <div class="w-16 h-16 bg-white/10 rounded-[1.5rem] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-neon-yellow shadow-inner border border-white/10">
+                    <div class="glass-card p-8 relative overflow-hidden group cursor-pointer bg-white">
+                        <div class="absolute -right-12 -top-12 w-32 h-32 bg-primary/50 rounded-full group-hover:bg-primary/80 transition-all duration-500 blur-2xl"></div>
+                        <div class="absolute -left-12 -bottom-12 w-60 h-60 bg-primary/25 rounded-full group-hover:bg-primary/50 transition-all duration-500 blur-2xl"></div>
+                        <div class="w-16 h-16 bg-gradient-to-br from-soft-bg to-white rounded-[1.5rem] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-primary shadow-md border border-primary/10 group-hover:shadow-green-500/30">
                             <i data-lucide="flask-conical" class="w-8 h-8"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-neon-yellow transition-colors">Sains</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed mb-6 font-medium">
-                            Sangat tertarik dengan dunia sains, terutama Biologi dan Pertanian, fokus pada biologi molekuler (entomologi dan fitopatologi) dan pertanian berkelanjutan melalui penerapan Pengendalian Hama Terpadu (PHT).
+                        <h3 class="text-2xl font-bold text-forest mb-3 group-hover:text-primary transition-colors">Sains</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
+                            Sangat tertarik dengan dunia sains, terutama Biologi dan Pertanian, fokus pada biologi molekuler (entomologi dan fitopatologi).
                         </p>
-                        <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-neon-yellow w-0 group-hover:w-full transition-all duration-700"></div>
+                        <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
                         </div>
                     </div>
 
                     <!-- Card Minat 2 -->
-                    <div class="glass-card p-8 relative overflow-hidden group cursor-pointer">
-                        <div class="absolute -right-12 -top-12 w-32 h-32 bg-white/5 rounded-full group-hover:bg-toxic-green/20 transition-all duration-500"></div>
-                        <div class="w-16 h-16 bg-white/10 rounded-[1.5rem] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-toxic-green shadow-inner border border-white/10">
+                    <div class="glass-card p-8 relative overflow-hidden group cursor-pointer bg-white">
+                        <div class="absolute -right-12 -top-12 w-40 h-40 bg-rich-gold/50 rounded-full group-hover:bg-rich-gold/80 transition-all duration-500 blur-2xl"></div>
+                        <div class="absolute -left-12 -bottom-12 w-60 h-60 bg-rich-gold/25 rounded-full group-hover:bg-rich-gold/50 transition-all duration-500 blur-2xl"></div>
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-50 to-white rounded-[1.5rem] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-rich-gold shadow-md border border-blue-200/50 group-hover:shadow-blue-500/30">
                             <i data-lucide="camera" class="w-8 h-8"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-toxic-green transition-colors">Editing</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed mb-6 font-medium">
-                            Memiliki Minat dan fokus di bidang editing terutama ilustrasi, dan sedang mencoba beberapa software editing untuk meningkatkan keahlian.
+                        <h3 class="text-2xl font-bold text-forest mb-3 group-hover:text-rich-gold transition-colors">Editing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
+                            Memiliki Minat dan fokus di bidang editing terutama ilustrasi, dan sedang mencoba beberapa software editing.
                         </p>
-                        <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-toxic-green w-0 group-hover:w-full transition-all duration-700"></div>
+                        <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-rich-gold w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
                         </div>
                     </div>
 
                     <!-- Card Minat 3 -->
-                    <div class="glass-card p-8 relative overflow-hidden group cursor-pointer">
-                        <div class="absolute -right-12 -top-12 w-32 h-32 bg-white/5 rounded-full group-hover:bg-acid-green/20 transition-all duration-500"></div>
-                        <div class="w-16 h-16 bg-white/10 rounded-[1.5rem] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-acid-green shadow-inner border border-white/10">
+                    <div class="glass-card p-8 relative overflow-hidden group cursor-pointer bg-white">
+                        <div class="absolute -right-12 -top-12 w-40 h-40 bg-vibrant/50 rounded-full group-hover:bg-vibrant/80 transition-all duration-500 blur-2xl"></div>
+                        <div class="absolute -left-12 -bottom-12 w-60 h-60 bg-vibrant/25 rounded-full group-hover:bg-vibrant/50 transition-all duration-500 blur-2xl"></div>
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-50 to-white rounded-[1.5rem] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-vibrant shadow-md border border-green-200/50 group-hover:shadow-green-400/30">
                             <i data-lucide="sprout" class="w-8 h-8"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-acid-green transition-colors">Nature</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed mb-6 font-medium">
-                            Selalu terpukau oleh alam, terutama dunia hayati, sangat tertarik pada makhluk hidup mikroskopis, tumbuhan, dan jamur.
+                        <h3 class="text-2xl font-bold text-forest mb-3 group-hover:text-vibrant transition-colors">Nature</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
+                            Selalu terpukau oleh alam, terutama dunia hayati, tertarik pada makhluk hidup mikroskopis, tumbuhan, dan jamur.
                         </p>
-                        <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-acid-green w-0 group-hover:w-full transition-all duration-700"></div>
+                        <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-vibrant w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
                         </div>
                     </div>
                 </div>
@@ -395,91 +450,76 @@
 
     <!-- SECTION 2: AKTIVITAS PERKULIAHAN -->
     <section id="activity" class="py-12 px-4 md:px-6">
-        <div class="max-w-7xl mx-auto raised-section rounded-[3rem] p-8 md:p-16 reveal">
-            <!-- No Grid here for contrast -->
+        <div class="max-w-7xl mx-auto rounded-[2rem] p-8 md:p-16 reveal">
             <div class="flex items-center gap-4 mb-16">
-                <div class="h-px bg-white/20 flex-1"></div>
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-white uppercase tracking-widest border-2 border-white px-8 py-3 rounded-full bg-forest/50 backdrop-blur">Akademik</h2>
-                <div class="h-px bg-white/20 flex-1"></div>
+                <div class="h-px bg-primary/30 flex-1"></div>
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-forest uppercase tracking-widest border-2 border-primary/20 px-8 py-3 rounded-full bg-white/80 backdrop-blur shadow-md">Akademik</h2>
+                <div class="h-px bg-primary/30 flex-1"></div>
             </div>
  
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Visual with rounded corners matching the section -->
-               <div class="relative rounded-[2.5rem] overflow-hidden border-2 border-white/10 reveal shadow-3xl h-96">
-
+                <!-- Visual Slider -->
+               <div class="relative rounded-[2.5rem] overflow-hidden border-8 border-primary shadow-2xl h-96 bg-white ring-1 ring-gray-100">
                     <div class="flex overflow-x-auto snap-x snap-mandatory h-full w-full scroll-smooth hide-scrollbar">
-
+                        <!-- Slide 1 -->
                         <div class="relative w-full flex-shrink-0 snap-center relative group h-full">
-                            <img src="praktikum.jpg" alt="Praktikum 1" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110">
-                            
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-8">
-                                <div class="border border-white/30 bg-white/10 backdrop-blur px-8 py-4 rounded-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
-                                    <p class="text-neon-yellow font-bold tracking-widest flex items-center gap-2">
-                                        <i data-lucide="bug" class="w-4 h-4"></i> PRAKTIKUM LAB
+                            <img src="praktikum.jpg" alt="Praktikum 1" class="w-full h-full object-cover transition-all duration-700 transform group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1000&auto=format&fit=crop'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-transparent to-transparent flex items-end justify-center pb-8">
+                                <div class="bg-white/95 backdrop-blur px-8 py-4 rounded-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-xl border-b-4 border-primary">
+                                    <p class="text-primary font-bold tracking-widest flex items-center gap-2 text-sm uppercase">
+                                        <i data-lucide="bug" class="w-4 h-4 text-lime-pop"></i> PRAKTIKUM LAB
                                     </p>
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Slide 2 -->
                         <div class="w-full flex-shrink-0 snap-center relative group h-full">
-                            <img src="field trip.jpg" alt="Aktivitas 2" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110">
-                            
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-8">
-                                <div class="border border-white/30 bg-white/10 backdrop-blur px-8 py-4 rounded-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
-                                    <p class="text-neon-yellow font-bold tracking-widest flex items-center gap-2">
-                                        <i data-lucide="bus" class="w-4 h-4"></i> FIELD TRIP
+                            <img src="field trip.jpg" alt="Aktivitas 2" class="w-full h-full object-cover transition-all duration-700 transform group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1533422902779-aff35862e462?q=80&w=1000&auto=format&fit=crop'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-transparent to-transparent flex items-end justify-center pb-8">
+                                <div class="bg-white/95 backdrop-blur px-8 py-4 rounded-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-xl border-b-4 border-primary">
+                                    <p class="text-primary font-bold tracking-widest flex items-center gap-2 text-sm uppercase">
+                                        <i data-lucide="bus" class="w-4 h-4 text-lime-pop"></i> FIELD TRIP
                                     </p>
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Slide 3 -->
                         <div class="w-full flex-shrink-0 snap-center relative group h-full">
-                            <img src="Cuplikan layar 2025-12-15 002902.png" alt="Aktivitas 3" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110">
-                            
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-8">
-                                <div class="border border-white/30 bg-white/10 backdrop-blur px-8 py-4 rounded-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
-                                    <p class="text-neon-yellow font-bold tracking-widest flex items-center gap-2">
-                                        <i data-lucide="flask-conical" class="w-4 h-4"></i> MENTOR BIOLOGI DASAR
+                            <img src="Cuplikan layar 2025-12-15 002902.png" alt="Aktivitas 3" class="w-full h-full object-cover transition-all duration-700 transform group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb2b075b955?q=80&w=1000&auto=format&fit=crop'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-transparent to-transparent flex items-end justify-center pb-8">
+                                <div class="bg-white/95 backdrop-blur px-8 py-4 rounded-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-xl border-b-4 border-primary">
+                                    <p class="text-primary font-bold tracking-widest flex items-center gap-2 text-sm uppercase">
+                                        <i data-lucide="flask-conical" class="w-4 h-4 text-lime-pop"></i> MENTOR BIOLOGI
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full flex-shrink-0 snap-center relative group h-full">
-                            <img src="pengamatan.jpg" alt="Aktivitas 3" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110">
-                            
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-8">
-                                <div class="border border-white/30 bg-white/10 backdrop-blur px-8 py-4 rounded-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
-                                    <p class="text-neon-yellow font-bold tracking-widest flex items-center gap-2">
-                                        <i data-lucide="map-pin" class="w-4 h-4"></i> HASIL PENGAMATAN
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
+
                 <!-- List Activities -->
                 <div class="space-y-6 reveal delay-200">
-                    <div class="glass-card p-6 flex gap-6 items-start group hover:bg-forest/50">
-                        <div class="w-14 h-14 rounded-2xl bg-white text-forest flex items-center justify-center font-bold text-xl shrink-0 group-hover:bg-neon-yellow transition-colors shadow-lg">01</div>
+                    <div class="glass-card p-6 flex gap-6 items-start group hover:bg-white border-l-4 border-l-transparent hover:border-l-primary transition-all hover:shadow-soft-green">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-green-600 text-white flex items-center justify-center font-bold text-xl shrink-0 shadow-lg shadow-green-600/30">01</div>
                         <div>
-                            <h4 class="text-xl font-bold text-white mb-1 group-hover:text-neon-yellow transition-colors">Mahasiswa 📖</h4>
-                            <p class="text-gray-300 text-sm leading-relaxed">Aktif di kelas, memiliki beberapa tugas yang berfokus pada inovasi pengendalian hama terpadu, sering berkesempatan menjadi ketua kelompok dalam diskusi.</p>
+                            <h4 class="text-xl font-bold text-forest mb-1 group-hover:text-primary transition-colors">Mahasiswa 📖</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Aktif di kelas, memiliki beberapa tugas yang berfokus pada inovasi pengendalian hama terpadu.</p>
                         </div>
                     </div>
-                    <div class="glass-card p-6 flex gap-6 items-start group hover:bg-forest/50">
-                        <div class="w-14 h-14 rounded-2xl border-2 border-white text-white flex items-center justify-center font-bold text-xl shrink-0 group-hover:bg-white group-hover:text-forest transition-colors">02</div>
+                    <div class="glass-card p-6 flex gap-6 items-start group hover:bg-white border-l-4 border-l-transparent hover:border-l-rich-gold transition-all hover:shadow-blue">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-blue-600 text-white flex items-center justify-center font-bold text-xl shrink-0 shadow-lg shadow-blue-600/30">02</div>
                         <div>
-                            <h4 class="text-xl font-bold text-white mb-1 group-hover:text-toxic-green transition-colors">Peer Educator 👨‍🏫</h4>
-                            <p class="text-gray-300 text-sm leading-relaxed">Menjadi mentor dan pengajar bagi teman sebaya pada mata kuliah Biologi dasar.</p>
+                            <h4 class="text-xl font-bold text-forest mb-1 group-hover:text-rich-gold transition-colors">Peer Educator 👨‍🏫</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Menjadi mentor dan pengajar bagi teman sebaya pada mata kuliah Biologi dasar.</p>
                         </div>
                     </div>
-                    <div class="glass-card p-6 flex gap-6 items-start group hover:bg-forest/50">
-                        <div class="w-14 h-14 rounded-2xl border-2 border-white text-white flex items-center justify-center font-bold text-xl shrink-0 group-hover:bg-white group-hover:text-forest transition-colors">03</div>
+                    <div class="glass-card p-6 flex gap-6 items-start group hover:bg-white border-l-4 border-l-transparent hover:border-l-lime-pop transition-all hover:shadow-lime">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-lime-pop to-lime-600 text-white flex items-center justify-center font-bold text-xl shrink-0 shadow-lg shadow-lime-600/30">03</div>
                         <div>
-                            <h4 class="text-xl font-bold text-white mb-1 group-hover:text-acid-green transition-colors">Asisten Praktikum 🎓</h4>
-                            <p class="text-gray-300 text-sm leading-relaxed">Membimbing adik tingkat PPKU pada mata kuliah Biologi dasar.</p>
+                            <h4 class="text-xl font-bold text-forest mb-1 group-hover:text-lime-pop transition-colors">Asisten Praktikum 🎓</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Membimbing adik tingkat PPKU pada mata kuliah Biologi dasar.</p>
                         </div>
                     </div>
                 </div>
@@ -489,38 +529,38 @@
 
     <!-- SECTION 3: ORGANISASI -->
     <section id="org" class="py-12 px-4 md:px-6">
-        <div class="max-w-7xl mx-auto raised-section rounded-[3rem] p-8 md:p-16 reveal">
-            <div class="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto organisasi-section rounded-[2rem] p-8 md:p-16 reveal">
+            <div class="absolute inset-0 grid-atas opacity-30 pointer-events-none"></div>
             
             <div class="relative z-10">
                 <div class="flex items-center gap-4 mb-16">
-                    <div class="h-px bg-white/20 flex-1"></div>
-                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white uppercase tracking-widest border-2 border-white px-8 py-3 rounded-full bg-forest/50 backdrop-blur">Organisasi</h2>
-                    <div class="h-px bg-white/20 flex-1"></div>
+                    <div class="h-px bg-primary/30 flex-1"></div>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-forest uppercase tracking-widest border-2 border-green/100 px-8 py-3 rounded-full bg-gradient-to-r from-vibrant/80 to-lime-200/80 backdrop-blur shadow-md">ORGANISASI</h2>
+                    <div class="h-px bg-primary/30 flex-1"></div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Org 1 -->
-                    <div class="glass-card p-8 flex items-center gap-8 hover:bg-white/5 transition-all group reveal delay-100 border border-white/20">
-                        <div class="w-24 h-24 bg-white rounded-[2rem] flex items-center justify-center shrink-0 border-4 border-neon-yellow shadow-xl group-hover:rotate-12 transition-transform">
-                            <img src="iaas.png">
+                    <div class="glass-card p-8 flex items-center gap-8 hover:bg-white transition-all group reveal delay-100 border border-primary/100 hover:border-primary/30">
+                        <div class="w-24 h-24 bg-white rounded-[2rem] flex items-center justify-center shrink-0 border-4 border-primary/80 shadow-xl group-hover:rotate-12 transition-transform overflow-hidden p-2 group-hover:border-primary">
+                            <img src="iaas.png" class="w-full h-full object-contain" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2910/2910793.png'">
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-white group-hover:text-neon-yellow transition-colors">IAAS LC IPB</h3>
-                            <p class="text-sm font-bold text-toxic-green mb-3 uppercase tracking-wide">ANGGOTA AKTIF IOP 33</p>
-                            <p class="text-sm text-gray-300">AKtif dalam berbagai kegiatan organisasi dan berkesempatan menjadi kedua divisi Design, Documentation, dan Decoration pada kegiatan Open Dialogue & Local Commitee Conference.</p>
+                            <h3 class="text-2xl font-bold text-forest group-hover:text-primary transition-colors">IAAS LC IPB</h3>
+                            <p class="text-xs font-bold text-rich-gold mb-1 uppercase tracking-wide bg-yellow-50 border border-rich-gold/100 inline-block px-5 py-1 rounded-full shadow-sm">ANGGOTA AKTIF IOP 33</p>
+                            <p class="text-sm text-slate-600 font-medium">Aktif dalam berbagai kegiatan organisasi dan berkesempatan menjadi ketua divisi Design, Documentation, dan Decoration.</p>
                         </div>
                     </div>
 
                     <!-- Org 2 -->
-                    <div class="glass-card p-8 flex items-center gap-8 hover:bg-white/5 transition-all group reveal delay-200 border border-white/20">
-                        <div class="w-24 h-24 bg-white rounded-[2rem] flex items-center justify-center shrink-0 border-4 border-white shadow-xl group-hover:-rotate-12 transition-transform">
-                            <img src="logo ppivot.png">
+                    <div class="glass-card p-8 flex items-center gap-8 hover:bg-white transition-all group reveal delay-200 border border-primary/100 hover:border-primary/30">
+                        <div class="w-24 h-24 bg-white rounded-[2rem] flex items-center justify-center shrink-0 border-4 border-primary/80 shadow-xl group-hover:-rotate-12 transition-transform overflow-hidden p-2 group-hover:border-primary">
+                            <img src="logo ppivot.png" class="w-full h-full object-contain" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3050/3050523.png'">
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-white group-hover:text-neon-yellow transition-colors">Pivot Solution</h3>
-                            <p class="text-sm font-bold text-toxic-green mb-3 uppercase tracking-wide">Lead of Marketing and Event</p>
-                            <p class="text-sm text-gray-300">Mengkoordinasi tim Marketing and Event dalam conten creation dan promosi Pivot Solution.</p>
+                            <h3 class="text-2xl font-bold text-forest group-hover:text-primary transition-colors">Pivot Solution</h3>
+                            <p class="text-xs font-bold text-rich-gold mb-1 uppercase tracking-wide bg-lime-50 border border-rich-gold/100 inline-block px-5 py-1 rounded-full shadow-sm">Lead of Marketing & Event</p>
+                            <p class="text-sm text-slate-600 font-medium">Mengkoordinasi tim Marketing and Event dalam content creation dan promosi Pivot Solution.</p>
                         </div>
                     </div>
                 </div>
@@ -528,239 +568,245 @@
         </div>
     </section>
 
-    <!-- SECTION 4: SOFTWARE & SKILL -->
-    <section id="skills" class="py-12 px-4 md:px-6">
-        <div class="max-w-7xl mx-auto raised-section rounded-[3rem] p-8 md:p-16 reveal">
+    <!-- SECTION 4: SKILLS & FOOTER -->
+    <section id="skills" class="py-12 px-4 md:px-6 mb-20">
+        <div class="max-w-7xl mx-auto kotak-section rounded-[2rem] p-8 md:p-16 reveal">
             <div class="flex items-center gap-4 mb-16">
-                <div class="h-px bg-white/20 flex-1"></div>
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-white uppercase tracking-widest border-2 border-white px-8 py-3 rounded-full bg-forest/50 backdrop-blur">Skills</h2>
-                <div class="h-px bg-white/20 flex-1"></div>
+                <div class="h-px bg-primary/30 flex-1"></div>
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-forest uppercase tracking-widest border-2 border-primary/20 px-8 py-3 rounded-full bg-white/80 backdrop-blur shadow-md">Skills</h2>
+                <div class="h-px bg-primary/30 flex-1"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-16">
                 <!-- Hard Skills / Tools -->
                 <div class="reveal delay-100">
-                    <h3 class="text-2xl font-bold text-neon-yellow mb-8 flex items-center gap-3">
-                        <span class="p-3 bg-white/10 rounded-2xl border border-white/10"><i data-lucide="monitor" class="w-6 h-6"></i></span>
-                        Software Proficiency
+                    <h3 class="text-2xl font-bold text-forest mb-8 flex items-center gap-3">
+                        <div class="p-2 bg-surface/90 rounded-lg text-primary"><i data-lucide="cpu" class="w-6 h-6"></i></div>
+                        Software & Tools
                     </h3>
-                    <div class="space-y-4">
-                        <div class="glass-card p-5 flex justify-between items-center hover:scale-[1.02] transition-transform">
-                            <span class="font-bold text-white flex items-center gap-9"><i data-lucide="" class="w-4 h-4 text-neon-yellow"></i>Ibis Paint</span>
-                            <div class="flex gap-1.5">
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                 <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-card p-4 flex items-center gap-3 hover:bg-white bg-white/70 hover:shadow-md border border-transparent hover:border-blue-200">
+                            <div class="w-10 h-10 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center shadow-inner">
+                                <i data-lucide="pen-tool" class="w-5 h-5"></i>
                             </div>
+                            <span class="font-bold text-slate-700">Canva</span>
                         </div>
-                        <div class="glass-card p-5 flex justify-between items-center hover:scale-[1.02] transition-transform">
-                            <span class="font-bold text-white flex items-center gap-9"><i data-lucide="bag" class="w-4 h-4 text-neon-yellow"></i>Google Workspace</span>
-                            <div class="flex gap-1.5">
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-white/20 rounded-full"></div>
+                        <div class="glass-card p-4 flex items-center gap-3 hover:bg-white bg-white/70 hover:shadow-md border border-transparent hover:border-orange-200">
+                            <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center shadow-inner">
+                                <i data-lucide="brush" class="w-5 h-5"></i>
                             </div>
+                            <span class="font-bold text-slate-700">Ibis Paint</span>
                         </div>
-                        <div class="glass-card p-5 flex justify-between items-center hover:scale-[1.02] transition-transform">
-                            <span class="font-bold text-white flex items-center gap-9"><i data-lucide="bag" class="w-4 h-4 text-neon-yellow"></i>Microsoft Office</span>
-                            <div class="flex gap-1.5">
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-white/20 rounded-full"></div>
-                                <div class="w-3 h-6 bg-white/20 rounded-full"></div>
+                        <div class="glass-card p-4 flex items-center gap-3 hover:bg-white bg-white/70 hover:shadow-md border border-transparent hover:border-indigo-200">
+                            <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shadow-inner">
+                                <i data-lucide="video" class="w-5 h-5"></i>
                             </div>
+                            <span class="font-bold text-slate-700">CapCut</span>
                         </div>
-                        <div class="glass-card p-5 flex justify-between items-center hover:scale-[1.02] transition-transform">
-                            <span class="font-bold text-white flex items-center gap-9"><i data-lucide="bag" class="w-4 h-4 text-neon-yellow"></i>Canva</span>
-                            <div class="flex gap-1.5">
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-white/20 rounded-full"></div>
-                                <div class="w-3 h-6 bg-white/20 rounded-full"></div>
+                        <div class="glass-card p-4 flex items-center gap-3 hover:bg-white bg-white/70 hover:shadow-md border border-transparent hover:border-green-200">
+                            <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shadow-inner">
+                                <i data-lucide="sheet" class="w-5 h-5"></i>
                             </div>
-                         </div>
-                        <div class="glass-card p-5 flex justify-between items-center hover:scale-[1.02] transition-transform">
-                            <span class="font-bold text-white flex items-center gap-9"><i data-lucide="bag" class="w-4 h-4 text-neon-yellow"></i>Capcut</span>
-                            <div class="flex gap-1.5">
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-neon-yellow rounded-full shadow-[0_0_8px_#D2FF28]"></div>
-                                <div class="w-3 h-6 bg-white/20 rounded-full"></div>
-                                <div class="w-3 h-6 bg-white/20 rounded-full"></div>
+                            <span class="font-bold text-slate-700">Ms. Excel</span>
+                        </div>
+                        <div class="glass-card p-4 flex items-center gap-3 hover:bg-white bg-white/70 hover:shadow-md border border-transparent hover:border-blue-200">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center shadow-inner">
+                                <i data-lucide="pencil" class="w-5 h-5"></i>
                             </div>
+                            <span class="font-bold text-slate-700">Ms. Word</span>
+                        </div>
+                        <div class="glass-card p-4 flex items-center gap-3 hover:bg-white bg-white/70 hover:shadow-md border border-transparent hover:border-blue-200">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center shadow-inner">
+                                <i data-lucide="Pencil" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-slate-700">G. Docs</span>
+                        </div>
+                            <div class="glass-card p-4 flex items-center gap-3 hover:bg-white bg-white/70 hover:shadow-md border border-transparent hover:border-green-200">
+                            <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shadow-inner">
+                                <i data-lucide="sheet" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-slate-700">S. Sheets</span>
+                        </div>
+                        <div class="glass-card p-4 flex items-center gap-3 hover:bg-white bg-white/70 hover:shadow-md border border-transparent hover:border-blue-200">
+                            <div class="w-10 h-10 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center shadow-inner">
+                                <i data-lucide="folder" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-slate-700">G. Drive</span>
                         </div>
                     </div>
                 </div>
-                 <!-- Soft Skills / Lab Skills -->
+
+                <!-- Soft Skills -->
                 <div class="reveal delay-200">
-                    <h3 class="text-2xl font-bold text-neon-yellow mb-8 flex items-center gap-3">
-                        <span class="p-3 bg-white/10 rounded-2xl border border-white/10"><i data-lucide="wrench" class="w-6 h-6"></i></span>
-                        Hard Skill
+                    <h3 class="text-2xl font-bold text-forest mb-8 flex items-center gap-3">
+                         <div class="p-2 bg-surface/90 rounded-lg text-primary"><i data-lucide="users" class="w-6 h-6"></i></div>
+                        Soft Skills
                     </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Editing Foto dan video 🎬</span>
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Ilustrasi 🎨</span>
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Desain Grafis 🖥️</span>
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Copywriting 📝</span>
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Mikroskopi 🔬</span>
-                    </div>
-                </div>
-                <div class="reveal delay-300">
-                    <h3 class="text-2xl font-bold text-neon-yellow mb-8 flex items-center gap-3">
-                        <span class="p-3 bg-white/10 rounded-2xl border border-white/10"><i data-lucide="pencil" class="w-6 h-6"></i></span>
-                        Soft Skill
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Kepemimpinan</span>
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Public Speaking</span>
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Kerja Tim</span>
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Integritas</span>
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Problem Solving</span>
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Kreatif</span>
-                        <span class="px-6 py-3 border-2 border-white/20 text-white rounded-[2rem] text-sm font-bold hover:bg-white hover:text-forest transition-all cursor-default hover:scale-110 shadow-lg">Inovatif</span>
+                    <div class="space-y-6">
+                        <div class="relative pt-1">
+                            <div class="flex mb-2 items-center justify-between">
+                                <span class="text-xs font-bold inline-block py-1 px-3 uppercase rounded-full text-rich-gold bg-surface/50 border border-rich-gold/40">Leadership</span>
+                                <span class="text-sm font-bold inline-block text-rich-gold">90%</span>
+                            </div>
+                            <div class="overflow-hidden h-3 mb-4 text-xs flex rounded-full bg-gray-200 shadow-inner">
+                                <div style="width:90%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-rich-gold to-vibrant transition-all duration-1000 ease-out"></div>
+                            </div>
+                        </div>
+                        <div class="relative pt-1">
+                            <div class="flex mb-2 items-center justify-between">
+                                <span class="text-xs font-bold inline-block py-1 px-3 uppercase rounded-full text-rich-gold bg-surface/50 border border-rich-gold/40">Problem Solving</span>
+                                <span class="text-sm font-bold inline-block text-rich-gold">80%</span>
+                            </div>
+                            <div class="overflow-hidden h-3 mb-4 text-xs flex rounded-full bg-gray-200 shadow-inner">
+                                <div style="width:80%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-rich-gold to-vibrant transition-all duration-1000 ease-out"></div>
+                            </div>
+                        </div>
+                           <div class="relative pt-1">
+                            <div class="flex mb-2 items-center justify-between">
+                                <span class="text-xs font-bold inline-block py-1 px-3 uppercase rounded-full text-primary bg-surface/50 border border-primary/40">Public Speaking</span>
+                                <span class="text-sm font-bold inline-block text-primary">85%</span>
+                            </div>
+                            <div class="overflow-hidden h-3 mb-4 text-xs flex rounded-full bg-gray-200 shadow-inner">
+                                <div style="width:85%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-primary to-vibrant transition-all duration-1000 ease-out"></div>
+                            </div>
+                        </div>
+                        <div class="relative pt-1">
+                            <div class="flex mb-2 items-center justify-between">
+                                <span class="text-xs font-bold inline-block py-1 px-3 uppercase rounded-full text-primary bg-surface/50 border border-primary/40">Creative</span>
+                                <span class="text-sm font-bold inline-block text-primary">95%</span>
+                            </div>
+                            <div class="overflow-hidden h-3 mb-4 text-xs flex rounded-full bg-gray-200 shadow-inner">
+                                <div style="width:95%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-primary to-vibrant transition-all duration-1000 ease-out"></div>
+                            </div>
+                        </div>
+                        <div class="relative pt-1">
+                            <div class="flex mb-2 items-center justify-between">
+                                <span class="text-xs font-bold inline-block py-1 px-3 uppercase rounded-full text-lime-pop bg-surface/50 border border-lime-pop/40">Teamwork</span>
+                                <span class="text-sm font-bold inline-block text-lime-pop">87%</span>
+                            </div>
+                            <div class="overflow-hidden h-3 mb-4 text-xs flex rounded-full bg-gray-200 shadow-inner">
+                                <div style="width:87%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-lime-500 to-vibrant transition-all duration-1000 ease-out"></div>
+                            </div>
+                        </div>
+                        <div class="relative pt-1">
+                            <div class="flex mb-2 items-center justify-between">
+                                <span class="text-xs font-bold inline-block py-1 px-3 uppercase rounded-full text-lime-pop bg-surface/50 border border-lime-pop/40">Innovative</span>
+                                <span class="text-sm font-bold inline-block text-lime-pop">89%</span>
+                            </div>
+                            <div class="overflow-hidden h-3 mb-4 text-xs flex rounded-full bg-gray-200 shadow-inner">
+                                <div style="width:89%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-lime-500 to-vibrant transition-all duration-1000 ease-out"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 5: CONTACT -->
-    <section id="contact" class="py-12 px-4 md:px-6">
-        <div class="max-w-4xl mx-auto raised-section rounded-[3rem] p-8 md:p-16 text-center reveal overflow-hidden">
-             <!-- Background Glow -->
-             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-neon-yellow/20 rounded-full blur-[80px]"></div>
-
-            <div class="relative z-10">
-                <div class="inline-flex p-6 rounded-[2rem] border-2 border-white mb-8 bg-white/5 backdrop-blur hover:rotate-12 transition-transform shadow-2xl">
-                    <i data-lucide="mail" class="w-10 h-10 text-white"></i>
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="bg-forest text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-5"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/20 rounded-full blur-[100px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div class="mb-10">
+                <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm border border-white/20">
+                    <i data-lucide="handshake" class="w-8 h-8 text-lime-pop"></i>
                 </div>
-                
-                <h2 class="text-4xl font-bold font-display text-white mb-2">
-                    Ayo <span class="text-neon-yellow">Berkolaborasi!</span>
-                </h2>
-                
-                <p class="text-gray-300 mb-12 text-lg max-w-xl mx-auto font-medium">
-                    Terbuka untuk diskusi Biologi, magang, atau sekadar ngobrol tentang inovasi dan masalah pertanian.
-                </p>
-                
-                <div class="grid md:grid-cols-3 gap-6 text-left">
-                    <a href="mailto:fadlilatulbahtiyar@apps.ipb.ac.id" class="glass-card p-6 flex flex-col justify-between h-full hover:-translate-y-2 group">
-                        <div>
-                            <i data-lucide="at-sign" class="w-8 h-8 text-neon-yellow mb-4"></i>
-                            <p class="text-xs font-bold text-gray-400 mb-1 uppercase">Email</p>
-                            <p class="text-white font-bold group-hover:text-neon-yellow break-all">fadlilatulbahtiyar@apps.ipb.ac.id</p>
-                        </div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/fadlilatulbahtiyar" target="_blank" class="glass-card p-6 flex flex-col justify-between h-full hover:-translate-y-2 group">
-                        <div>
-                            <i data-lucide="linkedin" class="w-8 h-8 text-neon-yellow mb-4"></i>
-                            <p class="text-xs font-bold text-gray-400 mb-1 uppercase">LinkedIn</p>
-                            <p class="text-white font-bold group-hover:text-neon-yellow">fadlilatul bahtiyar</p>
-                        </div>
-                    </a>
-                    <a href="https://instagram.com/bahtiyarrzz" target="_blank" class="glass-card p-6 flex flex-col justify-between h-full hover:-translate-y-2 group">
-                        <div>
-                            <i data-lucide="instagram" class="w-8 h-8 text-neon-yellow mb-4"></i>
-                            <p class="text-xs font-bold text-gray-400 mb-1 uppercase">Instagram</p>
-                            <p class="text-white font-bold group-hover:text-neon-yellow">@bahtiyarzz</p>
-                        </div>
-                    </a>
-                </div>
+                <h2 class="text-4xl font-display font-bold mb-4">Mari Terhubung!</h2>
+                <p class="text-green-200 max-w-lg mx-auto text-lg">Terbuka untuk diskusi Biologi, magang, atau sekadar ngobrol tentang inovasi dan masalah pertanian.</p>
+            </div>
+            
+            <div class="flex justify-center gap-6 mb-16">
+                <a href="https://instagram.com/bahtiyarrzz" class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-forest hover:shadow-glow-green transition-all hover:scale-110 group">
+                    <i data-lucide="instagram" class="w-6 h-6 group-hover:stroke-2"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/fadlilatulbahtiyar" class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-blue-700 hover:shadow-glow-green transition-all hover:scale-110 group">
+                    <i data-lucide="linkedin" class="w-6 h-6 group-hover:stroke-2"></i>
+                </a>
+                <a href="mailto:fadlilatulbahtiyar@apps.ipb.ac.id" class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-red-600 hover:shadow-glow-green transition-all hover:scale-110 group">
+                    <i data-lucide="mail" class="w-6 h-6 group-hover:stroke-2"></i>
+                </a>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-sm text-green-400/60 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2025 Fadlilatul Bahtiyar. All rights reserved.</p>
             </div>
         </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-8 bg-black border-t border-white/10 text-center relative z-20">
-        <p class="text-gray-500 text-sm font-bold flex items-center justify-center gap-2">
-            © Fadlilatul Bahtiyar 2025 | IPB University
-            <i data-lucide="sun" class="w-4 h-4 text-neon-yellow animate-spin-slow"></i> 
-        </p>
     </footer>
 
+    <!-- JAVASCRIPT LOGIC -->
     <script>
+        // 1. Initialize Lucide Icons
         lucide.createIcons();
-        
-        // --- 1. Navbar Scroll Effect ---
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-deep-forest/90', 'shadow-lg');
-                nav.classList.remove('glass-panel');
-                nav.style.borderBottom = "1px solid rgba(255,255,255,0.1)";
-            } else {
-                nav.classList.remove('bg-deep-forest/90', 'shadow-lg');
-                nav.classList.add('glass-panel');
-            }
-            
-            // Highlight Active Link
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 150) {
-                    current = section.getAttribute('id');
-                }
-            });
 
-            navLinks.forEach(link => {
-                link.classList.remove('text-neon-yellow');
-                link.querySelector('span').style.width = '0';
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('text-neon-yellow');
-                    link.querySelector('span').style.width = '100%';
-                }
-            });
-        });
-
-        // --- 2. Typewriter Effect ---
-        const text = "Dokter Tanaman";
-        const typewriterElement = document.getElementById('typewriter-text');
+        // 2. Typewriter Effect
+        const textToType = "Plant Protection.";
+        const typeWriterElement = document.getElementById('typewriter-text');
         let i = 0;
 
         function typeWriter() {
-            if (i < text.length) {
-                typewriterElement.innerHTML += text.charAt(i);
+            if (i < textToType.length) {
+                typeWriterElement.innerHTML += textToType.charAt(i);
                 i++;
                 setTimeout(typeWriter, 150);
+            } else {
+                // Optional: Reset effect
             }
         }
         
-        // Start typing after a slight delay
+        // Start typing after a short delay
         setTimeout(typeWriter, 1000);
 
-        // --- 3. Scroll Reveal Animation ---
-        const revealElements = document.querySelectorAll('.reveal');
-
-        const revealOnScroll = () => {
-            const windowHeight = window.innerHeight;
-            const elementVisible = 150;
-
-            revealElements.forEach((reveal) => {
-                const elementTop = reveal.getBoundingClientRect().top;
+        // 3. Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
                 if (elementTop < windowHeight - elementVisible) {
-                    reveal.classList.add('active');
+                    reveals[i].classList.add("active");
                 }
-            });
-        };
-
-        window.addEventListener('scroll', revealOnScroll);
+            }
+        }
+        window.addEventListener("scroll", reveal);
         // Trigger once on load
-        revealOnScroll();
-    
-        const gallery = document.getElementById('photoGallery');
-        gallery.addEventListener('click', function() {
-            this.classList.toggle('active');
+        reveal();
+
+        // 4. Navbar Background on Scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.style.background = 'rgba(255, 255, 255, 0.9)';
+            }
         });
 
+        // 5. Photo Stack Animation Logic
+        const photoGallery = document.getElementById('photoGallery');
+        let isActive = false;
+
+        photoGallery.addEventListener('click', () => {
+            isActive = !isActive; // Toggle state
+            if (isActive) {
+                photoGallery.classList.add('active');
+            } else {
+                photoGallery.classList.remove('active');
+            }
+        });
+
+        // Optional: Close stack when clicking outside (Advanced UX)
+        document.addEventListener('click', (event) => {
+            const isClickInside = photoGallery.contains(event.target);
+            if (!isClickInside && isActive) {
+                isActive = false;
+                photoGallery.classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
