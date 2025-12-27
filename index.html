@@ -95,7 +95,7 @@
         
         /* Raised Section Effect - Deeper Shadows */
         .raised-section {
-            background: linear-gradient(170deg, #00BA8C 10%, #beff634a 100%);
+            background: linear-gradient(170deg, #7ff99f91 10%, #7ff99f91 30%, #24c2fc51 100%);
             border: 3px solid rgba(255, 255, 255, 1);
             box-shadow: 
                 15px 15px 18px rgba(11, 73, 64, 0.255), 
@@ -138,8 +138,8 @@
         .grid-bg {
             background-size: 50px 50px;
             background-image: 
-                linear-gradient(to right, rgba(11, 83, 79, 0.996) 1.3px, transparent 1px),
-                linear-gradient(to bottom, rgba(11, 83, 79, 0.996) 1.3px, transparent 1px);
+                linear-gradient(to right, rgba(11, 83, 79, 0.142) 1.3px, transparent 1px),
+                linear-gradient(to bottom, rgba(11, 83, 79, 0.142) 1.3px, transparent 1px);
             mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
         }
@@ -325,6 +325,10 @@
                     Beranda
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
+                <a href="#about" class="nav-link relative group py-2">
+                    Tentang
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
                 <a href="#interests" class="nav-link relative group py-2">
                     Minat
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -337,6 +341,14 @@
                     Organisasi
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
+                <a href="#skills" class="nav-link relative group py-2">
+                    Skill
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#karya" class="nav-link relative group py-2">
+                    Karya
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
             </div>
 
             <a href="#contact" class="hidden md:flex px-6 py-2.5 rounded-full bg-forest text-white font-bold text-sm hover:bg-primary hover:shadow-lg hover:shadow-green-900/20 transition-all hover:scale-105 active:scale-95 shadow-md border-2 border-transparent">
@@ -344,9 +356,22 @@
             </a>
             
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-forest hover:text-primary transition-colors">
+            <button id="mobile-btn" class="md:hidden text-forest hover:text-primary transition-colors p-2">
                 <i data-lucide="menu" class="w-8 h-8"></i>
             </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl flex flex-col p-6 space-y-4 text-center animate-fade-in-down">
+            <a href="#home" class="block text-slate-600 font-medium hover:text-primary py-2 border-b border-gray-50">Beranda</a>
+            <a href="#about" class="block text-slate-600 font-medium hover:text-primary py-2 border-b border-gray-50">Tentang</a>
+            <a href="#interests" class="block text-slate-600 font-medium hover:text-primary py-2 border-b border-gray-50">Minat</a>
+            <a href="#activity" class="block text-slate-600 font-medium hover:text-primary py-2 border-b border-gray-50">Aktivitas</a>
+            <a href="#org" class="block text-slate-600 font-medium hover:text-primary py-2 border-b border-gray-50">Organisasi</a>
+            <a href="#skills" class="block text-slate-600 font-medium hover:text-primary py-2 border-b border-gray-50">Skill</a>
+            <a href="#karya" class="block text-slate-600 font-medium hover:text-primary py-2 border-b border-gray-50">Karya</a>
+            <a href="#contact" class="block w-full py-3 rounded-full bg-forest text-white font-bold text-sm shadow-md mt-4">
+                Kenalan Yuk! 👋
+            </a>
         </div>
     </nav>
 
@@ -365,7 +390,7 @@
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-vibrant opacity-75"></span>
                       <span class="relative inline-flex rounded-full h-2 w-2 bg-vibrant group-hover:bg-primary transition-colors"></span>
                     </span>
-                    MAHASISWA PROTEKSI TANAMAN
+                    <a href="https://ptn.ipb.ac.id/" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-bold hover:text-green-600 hover:underline transition cursor-pointer" >MAHASISWA PROTEKSI TANAMAN</a>
                 </div>
                 
                 <h1 class="text-5xl md:text-7xl font-bold font-display leading-[1.1] mb-6 text-forest text-shadow-sm">
@@ -457,7 +482,7 @@
 
             <div class="prose prose-lg text-grey-500 mx-auto leading-loose text-left">
                 <p class="mb-6">
-                    Hai! Saya Bahtiyar. Sehari-hari saya adalah mahasiswa <b href="https://ipb.ac.id" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-bold hover:text-green-600 hover:underline transition cursor-pointer">IPB University</b> yang sering berkutat dengan laporan praktikum dan mikroskop. 
+                    Hai! Saya Bahtiyar. Sehari-hari saya adalah mahasiswa <a href="https://ipb.ac.id" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-bold hover:text-green-600 hover:underline transition cursor-pointer" >IPB University</a> yang sering berkutat dengan laporan praktikum dan mikroskop. 
                 </p>
                 <p>
                     Namun, di luar laboratorium, saya menemukan ketenangan di depan layar laptop—mengolah ide menjadi desain visual. Saya percaya bahwa data sains yang rumit bisa menjadi indah jika disajikan dengan <span class="font-bold text-slate-800 border-b-2 border-green-400 hover:bg-green-100 transition px-1 cursor-pointer">kreativitas</span> yang tepat.
@@ -488,50 +513,98 @@
 
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Card Minat 1 -->
-                    <div class="glass-card p-8 relative overflow-hidden group cursor-pointer bg-white">
-                        <div class="absolute -right-12 -top-12 w-32 h-32 bg-primary/50 rounded-full group-hover:bg-primary/80 transition-all duration-500 blur-2xl"></div>
-                        <div class="absolute -left-12 -bottom-12 w-60 h-60 bg-primary/25 rounded-full group-hover:bg-primary/50 transition-all duration-500 blur-2xl"></div>
-                        <div class="w-16 h-16 bg-gradient-to-br from-soft-bg to-white rounded-[1.5rem] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-primary shadow-md border border-primary/10 group-hover:shadow-green-500/30">
-                            <i data-lucide="flask-conical" class="w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-forest mb-3 group-hover:text-primary transition-colors">Sains</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
-                            Sangat tertarik dengan dunia sains, terutama Biologi dan Pertanian, fokus pada biologi molekuler (entomologi dan fitopatologi).
-                        </p>
-                        <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-primary w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
+                    <div class="flip-card-container h-[350px] w-full cursor-pointer group [perspective:1000px] rounded-[2rem]" 
+                        onclick="this.querySelector('.flip-inner').classList.toggle('[transform:rotateY(180deg)]')">
+
+                        <div class="flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] shadow-sm hover:shadow-xl rounded-[2rem]">
+
+                            <div class="absolute inset-0 w-full h-full glass-card bg-white p-8 flex flex-col items-center justify-center [backface-visibility:hidden] overflow-hidden text-center z-20">
+                                <div class="absolute -right-12 -top-12 w-40 h-40 bg-primary/40 rounded-full blur-3xl opacity-60"></div>
+                                <div class="absolute -left-12 -bottom-12 w-60 h-60 bg-primary/20 rounded-full blur-3xl opacity-60"></div>
+
+                                <div class="w-24 h-24 bg-gradient-to-br from-soft-bg to-white rounded-[1.8rem] flex items-center justify-center mb-6 text-primary shadow-md border border-primary/10 relative z-10 group-hover:scale-105 transition-transform">
+                                    <i data-lucide="flask-conical" class="w-12 h-12"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-forest relative z-10">Sains</h3>
+                                <p class="text-primary/70 text-sm mt-4 font-medium animate-pulse relative z-10">(Klik untuk detail)</p>
+                            </div>
+
+                            <div class="absolute inset-0 w-full h-full glass-card bg-white/90 p-8 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden text-center z-10">
+                                <div class="absolute right-0 top-0 w-32 h-32 bg-primary/30 rounded-full blur-3xl"></div>
+                                <div class="absolute left-0 bottom-0 w-40 h-40 bg-primary/30 rounded-full blur-3xl"></div>
+                                
+                                <div class="relative z-20">
+                                    <h4 class="text-xl font-bold text-primary mb-4">Detail Minat</h4>
+                                    <p class="text-slate-700 text-md leading-relaxed font-medium">
+                                        "Sangat tertarik dengan dunia sains, terutama <b class="text-forest">Biologi dan Pertanian</b>, fokus pada biologi molekuler (entomologi dan fitopatologi)."
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
                     <!-- Card Minat 2 -->
-                    <div class="glass-card p-8 relative overflow-hidden group cursor-pointer bg-white">
-                        <div class="absolute -right-12 -top-12 w-40 h-40 bg-rich-gold/50 rounded-full group-hover:bg-rich-gold/80 transition-all duration-500 blur-2xl"></div>
-                        <div class="absolute -left-12 -bottom-12 w-60 h-60 bg-rich-gold/25 rounded-full group-hover:bg-rich-gold/50 transition-all duration-500 blur-2xl"></div>
-                        <div class="w-16 h-16 bg-gradient-to-br from-blue-50 to-white rounded-[1.5rem] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-rich-gold shadow-md border border-blue-200/50 group-hover:shadow-blue-500/30">
-                            <i data-lucide="camera" class="w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-forest mb-3 group-hover:text-rich-gold transition-colors">Editing</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
-                            Memiliki Minat dan fokus di bidang editing terutama ilustrasi, dan sedang mencoba beberapa software editing.
-                        </p>
-                        <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-rich-gold w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
+                    <div class="flip-card-container h-[350px] w-full cursor-pointer group [perspective:1000px] rounded-[2rem]" 
+                        onclick="this.querySelector('.flip-inner').classList.toggle('[transform:rotateY(180deg)]')">
+
+                        <div class="flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] shadow-sm hover:shadow-xl rounded-[2rem]">
+
+                            <div class="absolute inset-0 w-full h-full glass-card bg-white p-8 flex flex-col items-center justify-center [backface-visibility:hidden] overflow-hidden text-center z-20">
+                                <div class="absolute -right-12 -top-12 w-40 h-40 bg-primary/40 rounded-full blur-3xl opacity-60"></div>
+                                <div class="absolute -left-12 -bottom-12 w-60 h-60 bg-primary/20 rounded-full blur-3xl opacity-60"></div>
+
+                                <div class="w-24 h-24 bg-gradient-to-br from-soft-bg to-white rounded-[1.8rem] flex items-center justify-center mb-6 text-rich-gold shadow-md border border-rich-gold/10 relative z-10 group-hover:scale-105 transition-transform">
+                                    <i data-lucide="pen-tool" class="w-12 h-12"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-forest relative z-10">Editing</h3>
+                                <p class="text-rich-gold/70 text-sm mt-4 font-medium animate-pulse relative z-10">(Klik untuk detail)</p>
+                            </div>
+
+                            <div class="absolute inset-0 w-full h-full glass-card bg-white/90 p-8 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden text-center z-10">
+                                <div class="absolute right-0 top-0 w-32 h-32 bg-primary/30 rounded-full blur-3xl"></div>
+                                <div class="absolute left-0 bottom-0 w-40 h-40 bg-primary/30 rounded-full blur-3xl"></div>
+                                
+                                <div class="relative z-20">
+                                    <h4 class="text-xl font-bold text-rich-gold mb-4">Detail Minat</h4>
+                                    <p class="text-slate-700 text-md leading-relaxed font-medium">
+                                        "Memiliki Minat dan fokus di bidang editing terutama <b class="text-forest">Ilustrasi dan Graphic Design</b>, sedang mencoba beberapa software editing."
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
                     <!-- Card Minat 3 -->
-                    <div class="glass-card p-8 relative overflow-hidden group cursor-pointer bg-white">
-                        <div class="absolute -right-12 -top-12 w-40 h-40 bg-vibrant/50 rounded-full group-hover:bg-vibrant/80 transition-all duration-500 blur-2xl"></div>
-                        <div class="absolute -left-12 -bottom-12 w-60 h-60 bg-vibrant/25 rounded-full group-hover:bg-vibrant/50 transition-all duration-500 blur-2xl"></div>
-                        <div class="w-16 h-16 bg-gradient-to-br from-green-50 to-white rounded-[1.5rem] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-vibrant shadow-md border border-green-200/50 group-hover:shadow-green-400/30">
-                            <i data-lucide="sprout" class="w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-forest mb-3 group-hover:text-vibrant transition-colors">Nature</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
-                            Selalu terpukau oleh alam, terutama dunia hayati, tertarik pada makhluk hidup mikroskopis, tumbuhan, dan jamur.
-                        </p>
-                        <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-vibrant w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
+                    <div class="flip-card-container h-[350px] w-full cursor-pointer group [perspective:1000px] rounded-[2rem]" 
+                        onclick="this.querySelector('.flip-inner').classList.toggle('[transform:rotateY(180deg)]')">
+
+                        <div class="flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] shadow-sm hover:shadow-xl rounded-[2rem]">
+
+                            <div class="absolute inset-0 w-full h-full glass-card bg-white p-8 flex flex-col items-center justify-center [backface-visibility:hidden] overflow-hidden text-center z-20">
+                                <div class="absolute -right-12 -top-12 w-40 h-40 bg-primary/40 rounded-full blur-3xl opacity-60"></div>
+                                <div class="absolute -left-12 -bottom-12 w-60 h-60 bg-primary/20 rounded-full blur-3xl opacity-60"></div>
+
+                                <div class="w-24 h-24 bg-gradient-to-br from-soft-bg to-white rounded-[1.8rem] flex items-center justify-center mb-6 text-vibrant shadow-md border border-vibrant/10 relative z-10 group-hover:scale-105 transition-transform">
+                                    <i data-lucide="sprout" class="w-12 h-12"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-forest relative z-10">Nature</h3>
+                                <p class="text-vibrant/70 text-sm mt-4 font-medium animate-pulse relative z-10">(Klik untuk detail)</p>
+                            </div>
+
+                            <div class="absolute inset-0 w-full h-full glass-card bg-white/90 p-8 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden text-center z-10">
+                                <div class="absolute right-0 top-0 w-32 h-32 bg-primary/30 rounded-full blur-3xl"></div>
+                                <div class="absolute left-0 bottom-0 w-40 h-40 bg-primary/30 rounded-full blur-3xl"></div>
+                                
+                                <div class="relative z-20">
+                                    <h4 class="text-xl font-bold text-vibrant mb-4">Detail Minat</h4>
+                                    <p class="text-slate-700 text-md leading-relaxed font-medium">
+                                        "Selalu terpukau oleh alam, terutama <b class="text-forest">Dunia Hayati</b>, tertarik pada makhluk hidup mikroskopis, tumbuhan, dan jamur."
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -702,10 +775,10 @@
                         <div class="w-24 h-24 bg-white rounded-[2rem] flex items-center justify-center shrink-0 border-4 border-primary/80 shadow-xl group-hover:rotate-12 transition-transform overflow-hidden p-2 group-hover:border-primary">
                             <img src="iaas.png" class="w-full h-full object-contain" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2910/2910793.png'">
                         </div>
-                        <div>
+                        <div class="flex flex-col gap-[5px] items-start">
                             <h3 class="text-2xl font-bold text-forest group-hover:text-primary transition-colors">IAAS LC IPB</h3>
-                            <p class="text-xs font-bold text-rich-gold mb-1 uppercase tracking-wide bg-yellow-50 border border-rich-gold/100 inline-block px-5 py-1 rounded-full shadow-sm">ANGGOTA</p>
-                            <p class="text-sm text-slate-600 font-medium">Organisasi Non-Provit di didalam internal Kampus</p>
+                            <p class="text-xs font-bold text-rich-gold mb-1 uppercase tracking-wide bg-yellow-50 border border-rich-gold/100 inline-block px-5 py-1 rounded-full shadow-sm">Anggota</p>
+                            <p class="text-xs text-slate-600 font-medium">(Klik untuk detail)</p>
                         </div>
                     </div>
 
@@ -714,10 +787,10 @@
                         <div class="w-24 h-24 bg-white rounded-[2rem] flex items-center justify-center shrink-0 border-4 border-primary/80 shadow-xl group-hover:-rotate-12 transition-transform overflow-hidden p-2 group-hover:border-primary">
                             <img src="logo ppivot.png" class="w-full h-full object-contain" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3050/3050523.png'">
                         </div>
-                        <div>
+                        <div class="flex flex-col gap-[5px] items-start">
                             <h3 class="text-2xl font-bold text-forest group-hover:text-primary transition-colors">Pivot Solution</h3>
                             <p class="text-xs font-bold text-rich-gold mb-1 uppercase tracking-wide bg-lime-50 border border-rich-gold/100 inline-block px-5 py-1 rounded-full shadow-sm">Leader</p>
-                            <p class="text-sm text-slate-600 font-medium">Organisasi provit-Bimble Mahasiswa</p>
+                            <p class="text-xs text-slate-600 font-medium">(Klik untuk detail)</p>
                         </div>
                     </div>
                 </div>
@@ -861,7 +934,7 @@
     </section>
 
      <!-- SECTION 5: KARYA -->
-    <section id="org" class="py-2 px-4 md:px-6">
+    <section id="karya" class="py-2 px-4 md:px-6">
         <div class="max-w-7xl mx-auto karya-section rounded-[2rem] p-8 md:p-16 reveal">
             <div class="absolute inset-0 grid-atas opacity-30 pointer-events-none"></div>
             
@@ -949,19 +1022,10 @@
             
             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILK-1.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">Poster</span>
-                        <h3 class="text-white text-xl font-bold">IGTS 2026</h3>
-                    </div>
-                </div>
             </div>
 
             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-zoom-in border border-slate-100/50">
                 <img src="ILK-2.jpeg" alt="Character Design" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-700">
-                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
-                    Makrab ST09
-                </div>
             </div>
 
             <div class="break-inside-avoid p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-gradient-to-br from-white to-slate-50 flex items-center justify-center text-center border border-slate-100/50 min-h-[250px] group hover:shadow-md transition">
@@ -977,37 +1041,20 @@
 
              <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILP-1.jpeg" alt="Infografis" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-700">
-                 <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-white via-white/90 to-transparent p-6 pt-12">
-                     <h3 class="text-lg font-bold text-slate-800">Feed Makrab ST09 2025</h3>
-                 </div>
-            </div>
+             </div>
+
              <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILP-4.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">Poster</span>
-                        <h3 class="text-white text-xl font-bold">Harsakala Prabakara MPKMB 62</h3>
-                    </div>
-                </div>
-            </div>
+             </div>
+
              <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILP-5.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">Twibbon</span>
-                        <h3 class="text-white text-xl font-bold">Oprec Staff ME Pivot</h3>
-                    </div>
-                </div>
-            </div>
+             </div>
+
              <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILP-6.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">Feed</span>
-                        <h3 class="text-white text-xl font-bold">IGTS 2026</h3>
-                    </div>
-                </div>
-            </div>
+             </div>
+             
              <div class="break-inside-avoid rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 border border-slate-100/50 cursor-pointer group">
                 <div class="overflow-hidden">
                     <img src="ILP-7.jpeg" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
@@ -1023,22 +1070,16 @@
              <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILP-8.jpeg" alt="Square Art" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
             </div>
+            
              <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILP-9.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">Poster</span>
-                        <h3 class="text-white text-xl font-bold">Penyakit pada anak-anak</h3>
-                    </div>
-                </div>
             </div>
-             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-zoom-in border border-slate-100/50">
+            
+            <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-zoom-in border border-slate-100/50">
                 <img src="ILP-12.jpeg" alt="Character Design" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-700">
-                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
-                    Logo
-                </div>
             </div>
-             <div class="break-inside-avoid rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 border border-slate-100/50 cursor-pointer group">
+            
+            <div class="break-inside-avoid rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 border border-slate-100/50 cursor-pointer group">
                 <div class="overflow-hidden">
                     <img src="ILP-10.jpeg" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
                 </div>
@@ -1050,32 +1091,21 @@
                     </div>
                 </div>
             </div>
+
              <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILP-20.jpeg" alt="Square Art" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
             </div>
+
              <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-zoom-in border border-slate-100/50">
                 <img src="ILP-14.jpeg" alt="Character Design" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-700">
-                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
-                    Foto Profile
-                </div>
             </div>
-             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
+            
+            <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILP-18.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">Poster</span>
-                        <h3 class="text-white text-xl font-bold">Penyakit akibat polusi udara</h3>
-                    </div>
-                </div>
             </div>
-             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
+            
+            <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILP-19.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">Poster</span>
-                        <h3 class="text-white text-xl font-bold">Menyambut Bulan Ramadan</h3>
-                    </div>
-                </div>
             </div>
 
             <div class="break-inside-avoid rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 border border-slate-100/50 cursor-pointer group">
@@ -1090,28 +1120,20 @@
                     </div>
                 </div>
             </div>
-             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-zoom-in border border-slate-100/50">
+             
+            <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-zoom-in border border-slate-100/50">
                 <img src="ILP-15.jpeg" alt="Character Design" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-700">
-                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
-                    Logo kelas BP-14
-                </div>
             </div>
-             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
+            
+            <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="ILP-17.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">Poster</span>
-                        <h3 class="text-white text-xl font-bold">Keberagaman masyarakat Indonesia</h3>
-                    </div>
-                </div>
             </div>
+            
             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-zoom-in border border-slate-100/50">
                 <img src="ILP-16.jpeg" alt="Character Design" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-700">
-                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
-                    Logo Duta P5 SMAN 1 Tayu
-                </div>
             </div>
-             <div class="break-inside-avoid rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 border border-slate-100/50 cursor-pointer group">
+            
+            <div class="break-inside-avoid rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 border border-slate-100/50 cursor-pointer group">
                 <div class="overflow-hidden">
                     <img src="ILP-11.jpeg" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
                 </div>
@@ -1139,9 +1161,6 @@
 
             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-zoom-in border border-slate-100/50">
                 <img src="CN-2.jpeg" alt="Character Design" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-700">
-                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
-                    Feed
-                </div>
             </div>
 
             <div class="break-inside-avoid p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-gradient-to-br from-white to-slate-50 flex items-center justify-center text-center border border-slate-100/50 min-h-[250px] group hover:shadow-md transition">
@@ -1157,38 +1176,21 @@
 
              <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="CN-4.jpeg" alt="Infografis" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-700">
-                 <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-white via-white/90 to-transparent p-6 pt-12">
-                     <h3 class="text-lg font-bold text-slate-800">Kelompok 3 LAB-Bio ST09.2</h3>
-                 </div>
             </div>
-             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
+            
+            <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="CN-5.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">Poster</span>
-                        <h3 class="text-white text-xl font-bold">Burung Jalak Kerbau</h3>
-                    </div>
-                </div>
             </div>
-             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
+            
+            <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="CN-6.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">Poster</span>
-                        <h3 class="text-white text-xl font-bold">Prestasi SMA</h3>
-                    </div>
-                </div>
             </div>
-             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
+            
+            <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="CN-7.jpeg" alt="Poster Desain" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                        <span class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2 block">ID-Card</span>
-                        <h3 class="text-white text-xl font-bold">Panitia ANCAKSANA</h3>
-                    </div>
-                </div>
             </div>
-             <div class="break-inside-avoid rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 border border-slate-100/50 cursor-pointer group">
+            
+            <div class="break-inside-avoid rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 border border-slate-100/50 cursor-pointer group">
                 <div class="overflow-hidden">
                     <img src="CN-8.jpeg" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
                 </div>
@@ -1200,16 +1202,19 @@
                     </div>
                 </div>
             </div>
-             <div class="break-inside-avoid p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-gradient-to-br from-white to-slate-50 flex items-center justify-center text-center border border-slate-100/50 min-h-[250px] group hover:shadow-md transition">
+             
+            <div class="break-inside-avoid p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-gradient-to-br from-white to-slate-50 flex items-center justify-center text-center border border-slate-100/50 min-h-[250px] group hover:shadow-md transition">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-500 mx-auto mb-4 opacity-50 group-hover:opacity-100 transition" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983z"/></svg>
                     <h3 class="text-xl font-display font-bold text-slate-700 leading-snug">"Design is My Passion."</h3>
                 </div>
             </div>
-             <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
+             
+            <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="CN-9.jpeg" alt="Square Art" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
             </div>
-              <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
+              
+            <div class="break-inside-avoid relative group rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-white overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 cursor-pointer border border-slate-100/50">
                 <img src="CN-10.jpeg" alt="Square Art" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
             </div>
 
@@ -1427,7 +1432,7 @@
         lucide.createIcons();
 
         // 2. Typewriter Effect
-        const textToType = "Plant Protection.";
+        const textToType = "Plant Protectors.";
         const typeWriterElement = document.getElementById('typewriter-text');
         let i = 0;
 
@@ -1522,6 +1527,22 @@
             document.getElementById(id).classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
+
+
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Opsional: Tutup menu otomatis saat salah satu link diklik
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+             link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+             });
+         });
 
         </script>
     </body>
