@@ -86,11 +86,11 @@
 
         /* Glassmorphism Utilities - More Crisp */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(21, 128, 61, 0.15);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.427);
+            background: rgba(255, 255, 255, 0.25); /* Mengurangi opacity dari 0.9 ke 0.25 agar transparan */
+            backdrop-filter: blur(16px);           /* Efek blur latar belakang */
+            -webkit-backdrop-filter: blur(16px);   /* Dukungan untuk browser Safari */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Border putih tipis khas glassmorphism */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
         }
         
         /* Raised Section Effect - Deeper Shadows */
